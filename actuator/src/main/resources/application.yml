@@ -1,9 +1,9 @@
 management:
-  server:
-    port: 9482
+#  server:
+#    port: 9482
   endpoints:
     web:
-      base-path: "/manage-app"
+#      base-path: "/manage-app"
       exposure:
         include: "*"
         exclude:
@@ -31,3 +31,8 @@ info:
 logging:
   level:
     hello.controller: debug
+
+server:
+  tomcat:
+    mbeanregistry:
+      enabled: true
