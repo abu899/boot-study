@@ -1,0 +1,33 @@
+management:
+  server:
+    port: 9482
+  endpoints:
+    web:
+      base-path: "/manage-app"
+      exposure:
+        include: "*"
+        exclude:
+          - env
+          - beans
+  endpoint:
+    health:
+      show-details: ALWAYS
+      #      show-components: ALWAYS
+  info:
+    java:
+      enabled: true
+    os:
+      enabled: true
+    env:
+      enabled: true
+#    git:
+#      mode: full
+
+info:
+  app:
+    name: hello-actuator
+    company: brett
+
+logging:
+  level:
+    hello.controller: debug
